@@ -43,9 +43,9 @@ function showTodo(filter) {
                         </li>`;
             }
         });
-        allCount.innerHTML = todo.length;
-        pendingCount.innerHTML = todo.length;
     }
+    allCount.innerHTML = todos.length;
+    pendingCount.innerHTML = todos.length;
     // если li не пуст, вставьте это значение в taskbox, иначе вставьте span
     taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
     let checkTask = taskBox.querySelectorAll(".task");
