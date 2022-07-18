@@ -44,8 +44,8 @@ function showTodo(filter) {
             }
         });
     }
-    allCount.innerHTML = todos.length;
-    pendingCount.innerHTML = todos.length;
+//     allCount.innerHTML = todos.length;
+//     pendingCount.innerHTML = todos.length;
     // если li не пуст, вставьте это значение в taskbox, иначе вставьте span
     taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
     let checkTask = taskBox.querySelectorAll(".task");
@@ -73,12 +73,12 @@ function updateStatus(selectedTask) {
         taskName.classList.add("checked");
         // обновление статуса выбранной задачи до завершенной
         todos[selectedTask.id].status = "completed";
-        completedCount.innerHTML = document.querySelectorAll('input[type="checkbox"]:checked').length;
+//         completedCount.innerHTML = document.querySelectorAll('input[type="checkbox"]:checked').length;
     }else {
         taskName.classList.remove("checked");
         // обновление статуса выбранной задачи до ожидающей выполнения
         todos[selectedTask.id].status = "pending";
-        completedCount.innerHTML = document.querySelectorAll('input[type="checkbox"]:checked').length;
+//         completedCount.innerHTML = document.querySelectorAll('input[type="checkbox"]:checked').length;
     }
     localStorage.setItem("todo-list", JSON.stringify(todos))
 }
